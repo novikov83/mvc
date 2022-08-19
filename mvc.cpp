@@ -12,21 +12,13 @@ class TCircle: public IShape
 {
 public:
 	TCircle(int aX, int aY, int aRadius): mX{aX}, mY{aY}, mRadius{aRadius} {};
-	void Create(int aX, int aY, int aRadius) {
-		mX = aX;
-		mY = aY;
-		mRadius = aRadius;
+	void Draw() override {
+		std::cout << "Draw circle [x = " << mX << ", y = " << mY << ", R = " << mRadius << "]" << std::endl;
 	};
-	void Draw() override {};
 private:
 	int	mX;
 	int	mY;
 	int	mRadius;
-};
-class TRectangle: public IShape
-{
-public:
-	void Draw() override {};
 };
 
 class IView
